@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Add an API</title>
+      <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
+    </head>
+    <link rel="stylesheet" href="../css/index.css">
+    <body><div id='main'><center>
+      <fieldset>
+        <h1>API Information</h1>
+            <input type="text" placeholder="Enter request URL" id="url" name="url" size="50">
+            <p>Query Parameters</p>
+              <div id="keyvalue">
+                <input type="text" placeholder="Key" id="key" name="key">
+                <input type="text" placeholder="Value" id="value" name="url"><br>
+              </div>
+              <br><button type="button" onclick="addKeyValue()" id="btn1">Add more parameters</button><br><br>
+
+              <input type="text" placeholder="Monitoring Time (hrs)" id="monitorTime">
+              <input type="text" placeholder="Interval (min)" id="interval"><br><br>
+              How many iterations requests you wan to do at a time?
+              <br><br><input type="text" placeholder="E.g. 5" id="users"><br><br>
+
+              <input type="radio" name="APIType" id="publicAPI" value="publicAPI"checked> Public API
+              <input type="radio" name="APIType" id="privateAPI" value="privateAPI"> Private API
+              <br><br>
+
+              <div class="container-2">
+                <div class="btn btn-two" onclick="getAPIURL();">
+                  <span>Add API</span>
+                </div>
+              </div>
+        </fieldset>
+      </div>
+      <script src="../js/addAPI.js"></script>
+
+    </body>
+</html>

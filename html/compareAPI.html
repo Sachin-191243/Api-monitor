@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Montior Public API</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  </head>
+  <body><center>
+    <fieldset>
+    <legend>Double API Monitor</legend>
+    <h1> Your API Data</h1>
+    <h1> Response </h1>
+    <table border="1px">
+      <tr>
+        <th>
+        <th> API 1
+        <th> API 2
+      </tr>
+      <tr>
+        <td><h4> Number of Errors</h4>
+        <td><h4 id="response_code1"></h4>
+        <td><h4 id="response_code2"></h4>
+      </tr>
+      <tr>
+        <td><h4> Number of Successful Test</h4>
+        <td><h4 id="response1"></h4>
+        <td><h4 id="response2"></h4>
+      </tr>
+      <tr>
+        <td><h4> Average Response Time</h4>
+        <td><h4 id="avg_response1"></h4>
+        <td><h4 id="avg_response2"></h4>
+      </tr>
+    </table>
+
+    <button type="button" id="download">Download Data</button><br><br>
+    <!--<button type="button" id="response_text">Show response text</button><br><br>-->
+    <a id="downloadGraph"
+        download="APIGraph.jpg"
+        href=""
+        class="btn btn-primary float-right bg-flat-color-1"
+        title="Download Graph">Download Graph
+   </a><br>
+    <button type="button" id="chartbtn">Force re-render graph</button><br>
+    <br>
+    <h4>Your test will run for more </h4>
+    <h3 id='time'></h3>
+  </center>
+    <fieldset style="padding:20px">
+      <canvas id="chart" backgroundColor = 'rgba(255,255,255,1)';></canvas>
+    </fieldset>
+    <fieldset style="display:none" id="dataField">
+      <div id="monitor_data"> </div>
+    </fieldset>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="../js/compareAPI.js"></script>
+  </body>
+</html>
