@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "browserify": "^16.5.2",
+    "chartjs-plugin-annotation": "^0.5.7",
+    "file-saver": "^2.0.2",
+    "firebase": "^7.17.2",
+    "jquery": "^3.5.1",
+    "node": "^14.7.0"
+  }
+}
